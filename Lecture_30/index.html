@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerospace Blog</title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" 
+    type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- header section  -->
+        <div class="header_container">
+            <h2 class="header_title">Welcome to Aerospace Blog</h2>
+            <p class="header_desc"> Everything you need to know about Aerospace Engineering at IIT 
+                Bombay
+            </p>
+        </div>
+
+        <!-- main section -->
+        <main class="main_container">
+            <!-- 1st card start here  -->
+            <div class="card_container">
+                <a href="https://www.aero.iitb.ac.in/home/aerodynamics" 
+                    class="card_image_container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk55KVB-p_9OvUoKo1HP87Wc0_P6Qz-MxdlQ&s" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="https://www.aero.iitb.ac.in/home/aerodynamics" class="specialization">
+                        <h3 class="card_title">Aerodynamics</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abs
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Aerospace</span>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- 1st card ends here -->
+            <div class="card_container">
+                <a href="https://www.aero.iitb.ac.in/home/controls" class="card_image_container">
+                    <img src="data:image/jpeg;base64,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" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="https://www.aero.iitb.ac.in/home/controls" class="specialization">
+                        <h3 class="card_title">Dynamics and Control</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abc
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Hypersonic</span>
+                    </div>
+                 </div>
+            </div>
+            <!-- 2nd card  -->
+            <div class="card_container">    
+                <a href="#" class="card_image_container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVdK_Qy6RSPjcaU5wxnalno5jQbyblxPDjRQ&s" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="https://www.aero.iitb.ac.in/home/propulsion" class="specialization">
+                        <h3 class="card_title">Propulsion</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abc
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Hypersonic</span>
+                    </div>
+                 </div>
+            </div>
+            <!-- 3rd card_ -->
+            <div class="card_container">
+                <a href="https://www.aero.iitb.ac.in/home/structures" class="card_image_container">
+                    <img src="data:image/jpeg;base64,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" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="https://www.aero.iitb.ac.in/home/structures" class="specialization">
+                        <h3 class="card_title">Structures</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abc
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Aerospace</span>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- 4th card -->
+            <div class="card_container">
+                <a href="#" class="card_image_container">
+                    <img src="https://images.pexels.com/photos/30952121/pexels-photo-30952121/free-photo-of-serene-evening-walk-through-a-vibrant-city-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="#" class="specialization">
+                        <h3 class="card_title">Aerodynamics Laboratory</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abc
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Aerospace</span>
+                    </div>
+                 </div>
+            </div>
+            <!-- 5th card -->
+            <div class="card_container">
+                <a href="#" class="card_image_container">
+                    <img src="https://images.pexels.com/photos/30952121/pexels-photo-30952121/free-photo-of-serene-evening-walk-through-a-vibrant-city-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="#" class="specialization">
+                        <h3 class="card_title">Aerodynamics</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abc
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Aerospace</span>
+                    </div>
+                 </div>
+            </div>
+            <!-- 6th card -->
+            <div class="card_container">
+                <a href="#" class="card_image_container">
+                    <img src="https://images.pexels.com/photos/30952121/pexels-photo-30952121/free-photo-of-serene-evening-walk-through-a-vibrant-city-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="#" class="specialization">
+                        <h3 class="card_title">Aerodynamics</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abc
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Aerospace</span>
+                    </div>
+                 </div>
+            </div>
+            <!-- 7th card_ -->
+            <div class="card_container">
+                <a href="#" class="card_image_container">
+                    <img src="https://images.pexels.com/photos/30952121/pexels-photo-30952121/free-photo-of-serene-evening-walk-through-a-vibrant-city-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" 
+                    alt="image1"
+                    class="card_image" loading="lazy">
+
+                </a>
+
+                <div class="card_title_container">
+                    <a href="#" class="specialization">
+                        <h3 class="card_title">Aerodynamics</h3>
+                    </a>
+                    <p class="card_desc">
+                        Explore the innovations shaping future aircraft designs...
+                    </p>
+                    
+
+                </div>
+
+                <!-- card footer container -->
+                 <div class="card_footer_container">
+                    <!-- //there are two containers with image and name -->
+                    <div class="author_container">
+                        <div class="author_avatar_container">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWkpRcVB4hMuHQo3ZoEu0ySR4ZgHCYIz45QQ&s"
+                            alt="avatar image" class="avatar_image"
+                            loading="lazy">
+                        </div>
+                        <div class="auther_info_container">
+                            <span class="author_name">
+                                Abc Abc
+                            </span>
+                            <span class="author_date">
+                                21 March 2025
+                            </span>
+                        </div>
+                    </div>
+                    <!-- right side tag corresponding to that card -->
+                    <div>
+                        <span class="card_tag_container">Aerospace</span>
+                    </div>
+                 </div>
+            </div>
+            <!-- 8th card_ -->
+           
+
+        </main>
+
+        <!-- main container ends here -->
+
+        <!-- footer section ofclass = container  -->
+         <footer>
+
+         </footer>
+    </div>
+    
+</body>
+</html>
+
+
+
